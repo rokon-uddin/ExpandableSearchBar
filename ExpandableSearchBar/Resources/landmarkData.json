@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Turtle Rock",
+        "id": 1001,
+        "subtitle": "Joshua Tree National Park",
+        "imageName": "turtlerock"
+    },
+    {
+        "name": "Silver Salmon Creek",
+        "id": 1002,
+        "subtitle": "Lake Clark National Park and Preserve",
+        "imageName": "silversalmoncreek"
+    },
+    {
+        "name": "Chilkoot Trail",
+        "id": 1003,
+        "subtitle": "Klondike Gold Rush National Historical Park",
+        "imageName": "chilkoottrail"
+    },
+    {
+        "name": "St. Mary Lake",
+        "id": 1004,
+        "subtitle": "Glacier National Park",
+        "imageName": "stmarylake"
+    },
+    {
+        "name": "Twin Lake"
+        "id": 1005,
+        "subtitle": "Lake Clark National Park and Preserve",
+        "imageName": "twinlake"
+    },
+    {
+        "name": "Lake McDonald",
+        "id": 1006,
+        "subtitle": "Glacier National Park",
+        "imageName": "lakemcdonald"
+    },
+    {
+        "name": "Charley Rivers",
+        "id": 1007,
+        "subtitle": "Charley Rivers National Preserve",
+        "imageName": "charleyrivers"
+    },
+    {
+        "name": "Icy Bay",
+        "id": 1008,
+        "subtitle": "Wrangell-St. Elias National Park and Preserve",
+        "imageName": "icybay"
+    },
+    {
+        "name": "Rainbow Lake",
+        "id": 1009,
+        "subtitle": "State Recreation Area",
+        "imageName": "rainbowlake"
+    },
+    {
+        "name": "Hidden Lake",
+        "id": 1010,
+        "subtitle": "North Cascades National Park",
+        "imageName": "hiddenlake"
+    },
+    {
+        "name": "Chincoteague",
+        "id": 1011,
+        "subtitle": "Chincoteague National Wildlife Refuge",
+        "imageName": "chincoteague"
+    },
+    {
+        "name": "Lake Umbagog",
+        "id": 1012,
+        "subtitle": "Umbagog National Wildlife Refuge",
+        "imageName": "umbagog"
+    }
+]
