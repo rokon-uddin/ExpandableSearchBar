@@ -36,6 +36,7 @@ struct HomeView: View {
         }
         .scrollTargetLayout()
       }
+      .scrollIndicators(.hidden)
       .scrollTargetBehavior(CustomScrollTarget())
       .animation(.snappy(duration: 0.3, extraBounce: 0), value: isFocused)
       .onScrollGeometryChange(for: CGFloat.self) {
