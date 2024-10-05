@@ -1,4 +1,5 @@
-# Expandable SearchBar
+# Expandable SearchBar and Zoom Navitation
 
 
-![](assets/SSR.gif)
+![](assets/exp.gif)
+![](assets/zoom.gif)
