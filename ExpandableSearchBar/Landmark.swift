@@ -17,7 +17,7 @@ struct Landmark: Decodable, Identifiable {
 
 extension Landmark {
   var imageURL: URL? {
-    Bundle.main.url(forResource: imageName + "@2x", withExtension: "jpg")
+    Bundle.main.url(forResource: imageName, withExtension: "jpg")
   }
 }
 
