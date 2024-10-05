@@ -5,12 +5,17 @@
 //  Created by Mohammed Rokon Uddin on 10/1/24.
 //
 
-import Foundation
+import SwiftUI
 
 @Observable
 class LandmarksViewModel {
-  private let client = LandmarksClient()
   var landmarks: Landmarks = []
+  private let client = LandmarksClient()
+  var images: [Int: Image] = [:]
+
+  func addImage(_ image: Image, for id: Int) {
+    images[id] = image
+  }
 
   func fetchLandmarks() {
     do {

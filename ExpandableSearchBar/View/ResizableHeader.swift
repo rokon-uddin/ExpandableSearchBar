@@ -1,48 +1,11 @@
 //
-//  HomeView.swift
+//  ResizableHeader.swift
 //  ExpandableSearchBar
 //
-//  Created by Mohammed Rokon Uddin on 10/1/24.
+//  Created by Mohammed Rokon Uddin on 10/6/24.
 //
 
 import SwiftUI
-
-struct HomeView: View {
-  private let viewModel = LandmarksViewModel()
-  @State private var progress: CGFloat = 0
-  @State var searchText = ""
-  @FocusState var isFocused: Bool
-  var body: some View {
-    ScrollView(.vertical) {
-      LazyVStack(spacing: 16) {
-        ForEach(viewModel.landmarks) { landmark in
-          CardView(landmark: landmark)
-        }
-      }
-      .padding(16)
-      .offset(y: isFocused ? 0 : progress * 76)
-      .padding(.bottom, 76)
-      .safeAreaInset(edge: .top, spacing: 0) {
-        ResizableHeader(progress: progress, text: $searchText, isFocused: $isFocused)
-      }
-      .scrollTargetLayout()
-    }
-    .scrollTargetBehavior(CustomScrollTarget())
-    .animation(.snappy(duration: 0.3, extraBounce: 0), value: isFocused)
-    .onScrollGeometryChange(for: CGFloat.self) {
-      $0.contentOffset.y + $0.contentInsets.top
-    } action: { oldValue, newValue in
-      progress = max(min(newValue / 76, 1), 0)
-    }
-    .onAppear {
-      viewModel.fetchLandmarks()
-    }
-  }
-}
-
-#Preview {
-  ContentView()
-}
 
 struct ResizableHeader: View {
   let progress: CGFloat
@@ -119,8 +82,7 @@ struct ResizableHeader: View {
   }
 
   nonisolated private
-    func offsetY(_ proxy: GeometryProxy) -> CGFloat
-  {
+  func offsetY(_ proxy: GeometryProxy) -> CGFloat {
     let minY = proxy.frame(in: .scrollView(axis: .vertical)).minY
     return minY > 0 ? (isFocused ? -minY : 0) : -minY
   }

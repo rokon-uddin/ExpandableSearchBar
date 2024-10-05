@@ -9,7 +9,7 @@ import Foundation
 
 typealias Landmarks = [Landmark]
 
-struct Landmark: Decodable, Identifiable {
+struct Landmark: Decodable, Identifiable, Hashable {
   let id: Int
   let name: String
   let subtitle, imageName: String
