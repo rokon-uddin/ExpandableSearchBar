@@ -25,9 +25,9 @@ struct HomeView: View {
       .safeAreaInset(edge: .top, spacing: 0) {
         ResizableHeader(progress: progress, text: $searchText, isFocused: $isFocused)
       }
-      //      .scrollTargetLayout()
+      .scrollTargetLayout()
     }
-    //    .scrollTargetBehavior(CustomScrollTarget())
+    .scrollTargetBehavior(CustomScrollTarget())
     .animation(.snappy(duration: 0.3, extraBounce: 0), value: isFocused)
     .onScrollGeometryChange(for: CGFloat.self) {
       $0.contentOffset.y + $0.contentInsets.top
